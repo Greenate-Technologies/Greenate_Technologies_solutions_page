@@ -1,0 +1,13 @@
+{% extends "Auth/layout.html" %}
+
+{% block content %}
+    <div class="authbox">
+        <h1>Login</h1>
+        <form action="{% url "login" %}" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type= "submit">Log in</button>
+        </form>
+        <p>Don't have an account yet <a href="{% url "sign-up" %}">sign up</a></p>
+    </div>
+{% endblock content %}

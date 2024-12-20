@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="posts">
+        {% for post in posts %}
+            <a href="{% url "Post" post.id %}">
+                <div class="post">
+                    <div class="prob">
+                        <h1>{{post.title}}</h1>
+                        <p>{{post.content}}</p>
+                    </div> 
+                    
+                    <div class="sol">
+                        <h2>Solution Title</h2>
+                        <p>{{post.solutions.count}} solutions</p>
+                        <b>{{post.author}}</b>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        <div class="newpost">
+            <h1>New post</h1>
+            <form action="{% url "Posts" %}" method="post", enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
