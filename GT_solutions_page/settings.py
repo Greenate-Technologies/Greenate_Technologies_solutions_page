@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-wgai=ia_y#)w#e2yo!jt2$m)7x4!-wsph)&1atr+!tl%m$xb_)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Greenate Technologies Solutions Page.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['greenate-technologies-solutions-page.onrender.com', '127.0.0.1']
 
 AUTH_USER_MODEL = 'Post.CustomUser'
 
